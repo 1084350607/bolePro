@@ -13,5 +13,21 @@ export default defineConfig({
       '@/public': resolve(__dirname, './public')
     }
   },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
+    },
+    rollupOptions: {
+      output: {
+        chunkFileNames: "js/[name].[hash].js",
+        entryFileNames: "js/[name].[hash].js",
+        assetFileNames: "[ext]/[name].[hash].[ext]"
+      }
+    },
+  },
   plugins: [vue()]
 })
