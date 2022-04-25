@@ -22,6 +22,7 @@ export default defineConfig({
     }
   },
   build: {
+    // 启用terser清除console.log()
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -30,6 +31,7 @@ export default defineConfig({
       }
     },
     rollupOptions: {
+      // 打包目录优化
       output: {
         chunkFileNames: "js/[name].[hash].js",
         entryFileNames: "js/[name].[hash].js",

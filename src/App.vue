@@ -2,6 +2,11 @@
   <div>
     <img alt="Vue logo" src="@/assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <div class="flex flex-row">
+      <div class="basis-1/4">01</div>
+      <div class="basis-1/4">02</div>
+      <div class="basis-1/2">03</div>
+    </div>
   </div>
 </template>
 
