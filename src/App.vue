@@ -1,17 +1,22 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from '@/comp/HelloWorld.vue'
-
-console.log('测试compress')
-</script>
-
 <template>
   <div>
     <img alt="Vue logo" src="@/assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   </div>
 </template>
+
+<script setup lang="ts">
+import HelloWorld from '@/comp/HelloWorld.vue'
+import axios from 'axios';
+
+async function fn() {
+  let data1 = await axios.get(import.meta.env.VITE_BASE_URL);
+  console.log(data1)
+}
+
+fn();
+
+</script>
 
 <style>
 #app {
