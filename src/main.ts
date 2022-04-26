@@ -1,7 +1,22 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './index.css'
+import { createApp } from "vue"
+import { createStore } from "vuex"
 
-const Vue = createApp(App);
+import App from "./App.vue"
+import "./index.css"
 
-Vue.mount('#app')
+const store = createStore({
+  state: () => {
+    return {
+      count: 0,
+    }
+  },
+  mutations: {
+    increment: state => {
+      state.count++
+    },
+  },
+})
+
+const app = createApp(App)
+app.use(store)
+app.mount("#app")

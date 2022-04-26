@@ -1,27 +1,24 @@
+<script setup lang="ts">
+import { useStore } from "vuex"
+
+const store = useStore()
+const state = store.state
+
+const add = () => store.commit("increment")
+</script>
+
 <template>
   <div>
-    <img alt="Vue logo" src="@/assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <p>{{ state.count }}</p>
+    <button @click="add">add</button>
     <div class="flex flex-row">
       <div class="basis-1/4">01</div>
       <div class="basis-1/4">02</div>
       <div class="basis-1/2">03</div>
     </div>
+    <img src="@/assets/img/test.jpg" />
   </div>
 </template>
-
-<script setup lang="ts">
-import HelloWorld from '@/comp/HelloWorld.vue'
-import axios from 'axios';
-
-async function fn() {
-  let data1 = await axios.get(import.meta.env.VITE_BASE_URL);
-  console.log(data1)
-}
-
-fn();
-
-</script>
 
 <style>
 #app {
