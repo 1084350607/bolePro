@@ -4,7 +4,7 @@ import { useStore } from "vuex"
 const store = useStore()
 const state = store.state
 
-const add = () => store.commit("increment")
+const add = () => store.commit("add")
 </script>
 
 <template>
