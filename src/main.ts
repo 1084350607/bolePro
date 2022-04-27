@@ -1,21 +1,8 @@
 import { createApp } from "vue"
-import { createStore } from "vuex"
-
 import App from "./App.vue"
+import "./common/css/base.css"
 import "./index.css"
-
-const store = createStore({
-  state: () => {
-    return {
-      count: 0,
-    }
-  },
-  mutations: {
-    increment: state => {
-      state.count++
-    },
-  },
-})
+import store from "./store/index"
 
 const app = createApp(App)
 app.use(store)

@@ -20,6 +20,6 @@
       "@/public/*": ["src/public/*"]
     },
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/utils/axios.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/utils/axios.js", "src/store/state.ts", "src/store/actions.ts", "src/store/index.ts", "src/store/mutations.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
