@@ -10,7 +10,7 @@ const router = createRouter({
     {
       path: "/login",
       name: "login",
-      component: () => import(/* webpackChunkName: "home" */ "@/src/pages/loginPage.vue"),
+      component: () => import(/* webpackChunkName: "home" */ "@/src/pages/LoginP/index.vue"),
       meta: {
         index: 1,
       },
@@ -18,7 +18,7 @@ const router = createRouter({
     {
       path: "/signup",
       name: "signup",
-      component: () => import(/* webpackChunkName: "home" */ "@/src/pages/signupPage.vue"),
+      component: () => import(/* webpackChunkName: "home" */ "@/src/pages/SignUp/index.vue"),
       meta: {
         index: 2,
       },

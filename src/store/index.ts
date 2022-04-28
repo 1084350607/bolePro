@@ -20,6 +20,7 @@ export const store = createStore<State>({
   },
 })
 
+// define useStore in order to get the correct typescript type
 export function useStore() {
   return baseUseStore(key)
 }
