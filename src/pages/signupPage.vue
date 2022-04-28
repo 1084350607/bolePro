@@ -2,8 +2,8 @@
 
 <template>
   <div>
-    <router-view></router-view>
+    <h1>Signup Page</h1>
   </div>
 </template>
 
-<style></style>
+<style scoped></style>

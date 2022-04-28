@@ -58,6 +58,7 @@ export default defineConfig({
       "@/comp": resolve(__dirname, "./src/components"),
       "@/assets": resolve(__dirname, "./src/assets"),
       "@/public": resolve(__dirname, "./public"),
+      "@/store": resolve(__dirname, "./src/store"),
     },
   },
   build: {

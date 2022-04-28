@@ -4,4 +4,10 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  // 关闭预设避免和Bootstrap冲突
+  corePlugins: {
+    preflight: false,
+  },
+  // 给Tailwind加前缀
+  prefix: "tw-",
 }

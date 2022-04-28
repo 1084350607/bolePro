@@ -1,12 +1,25 @@
-import { createStore } from "vuex"
-import state from "./state"
-import actions from "./actions"
-import mutations from "./mutations"
+import { InjectionKey } from "vue"
+import { createStore, useStore as baseUseStore, Store } from "vuex"
+import { auth, Auth } from "./module/auth"
 
-const store = createStore({
-  state,
-  actions,
-  mutations,
+export interface State {
+  count: number
+  auth?: Auth
+}
+
+export const key: InjectionKey<Store<State>> = Symbol()
+
+export const store = createStore<State>({
+  state() {
+    return {
+      count: 0,
+    }
+  },
+  modules: {
+    auth,
+  },
 })
 
-export default store
+export function useStore() {
+  return baseUseStore(key)
+}
